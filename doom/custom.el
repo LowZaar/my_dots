@@ -11,3 +11,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(setq projectile-project-search-path '("/home/lowzaar/HDD/Code/" "/home/lowzaar/Code"))
+(setq projectile-cleanup-known-projects nil)
