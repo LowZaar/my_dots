@@ -14,3 +14,4 @@
 
 (setq projectile-project-search-path '("/home/lowzaar/HDD/Code/" "/home/lowzaar/Code"))
 (setq projectile-cleanup-known-projects nil)
+(setq lsp-copilot-applicable-fn (lambda (&rest _) nil))
