@@ -76,3 +76,6 @@
 ;; they are implemented.
 
 (apheleia-global-mode +1)
+
+(with-eval-after-load 'lsp-mode
+  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\vendor\\'"))
