@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
-;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+(setq doom-font (font-spec :family "FiraCode Nerd Font" :size 16 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "FiraCode Nerd Font Mono" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -75,7 +75,13 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(apheleia-global-mode +1)
+(setq neo-theme (if (display-graphic-p) 'nerd-icons))
 
-(with-eval-after-load 'lsp-mode
-  (add-to-list 'lsp-file-watch-ignored-directories "[/\\\\]\\vendor\\'"))
+(setq fancy-splash-image (expand-file-name "assets/doom.png" doom-user-dir))
+
+(add-hook 'window-setup-hook #'toggle-frame-maximized)
+
+(after! lsp-mode (setq lsp-file-watch-threshold 5000))
+
+(after! projectile
+  (setq projectile-project-search-path '("/home/lowzaar/HDD/Code/" "/home/lowzaar/Code")))
