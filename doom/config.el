@@ -75,9 +75,7 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq neo-theme (if (display-graphic-p) 'nerd-icons))
-
-(setq fancy-splash-image (expand-file-name "assets/doom.png" doom-user-dir))
+(setq fancy-splash-image (expand-file-name "assets/doom_cute.png" doom-user-dir))
 
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
 
@@ -85,3 +83,6 @@
 
 (after! projectile
   (setq projectile-project-search-path '("/home/lowzaar/HDD/Code/" "/home/lowzaar/Code")))
+
+
+(setq projectile-switch-project-action #'treemacs)
