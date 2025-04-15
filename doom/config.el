@@ -79,7 +79,10 @@
 
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
 
+(with-eval-after-load 'php-mode (add-hook 'php-mode-hook #'focus-mode))
+
 (after! lsp-mode (setq lsp-file-watch-threshold 5000))
+
 
 (after! projectile
   (setq projectile-project-search-path '("/home/lowzaar/HDD/Code/" "/home/lowzaar/Code")))
